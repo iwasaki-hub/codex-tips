@@ -39,6 +39,21 @@ CLIコマンドの具体的な例・安全上の注意は [Codex CLI 実践Tips 
 | [20 ways to waste fewer tokens in Codex](https://www.reddit.com/r/codex/comments/1xm88mo/20_ways_to_waste_fewer_tokens_in_codex_from_basic/) | コミュニティ: 指示の整理、MCP、プロファイル、テスト選択。保証された削減率ではない |
 | [Reduced Codex token/credit usage](https://www.reddit.com/r/codex/comments/1wi4hup/reduced_codex_tokencredit_usage/) | コミュニティ: コンテキスト管理と検証手順の工夫。単一比較からの報告 |
 
+## VS Code × Codex × ChatGPT編の追加参考資料
+
+[VS Code × Codex × ChatGPT 実践Tips 8選](VSCODE_CODEX_CHATGPT_TIPS_JA.md) では、公式機能と海外開発者の体験談を分けて記載しています。
+
+| 資料 | 種別 / 採用した知見 |
+| --- | --- |
+| [Codex IDE拡張機能](https://developers.openai.com/codex/ide) | 公式: 開いているファイルや選択範囲、差分レビュー、クラウド委任 |
+| [AGENTS.md](https://developers.openai.com/codex/guides/agents-md) | 公式: プロジェクトの指示を読む仕組み |
+| [Run long horizon tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex) | 公式: 計画と検証の段階分け |
+| [Codex設定リファレンス](https://developers.openai.com/codex/config-reference) | 公式: Windowsサンドボックス関連設定 |
+| [Work with Apps用VS Code拡張機能](https://help.openai.com/ja-jp/articles/10128592-how-to-install-the-work-with-apps-visual-studio-code-extension) | 公式: ChatGPT macOSアプリ専用拡張機能との区別 |
+| [Work with Apps on macOS](https://help.openai.com/ja-jp/articles/10119604-work-with-apps-on-macos) | 公式: 対応プラットフォームとアプリ |
+| [My best workflow so far for building projects](https://www.reddit.com/r/codex/comments/1tf4s07/my_best_workflow_so_far_for_building_projects/) | コミュニティ: タスク分割と役割分担の体験談 |
+| [Is there a better way to use ChatGPT + Codex?](https://www.reddit.com/r/codex/comments/1vtmmjt/is_there_a_better_way_to_use_chatgpt_codex/) | コミュニティ: チャットとコーディングエージェントの連携議論 |
+
 ## メンテナンス方針
 
 1. 事実の根拠は公式ガイドを優先する。
