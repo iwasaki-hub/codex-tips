@@ -6,6 +6,16 @@
 **最終確認:** 2026-11-21  
 **方針:** 公式情報とコミュニティの体験談を分け、再利用できる雛形を残す
 
+## URLだけで各プロジェクトに適用する（初回設定のみ必要）
+
+ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連携用テンプレート](templates/CHATGPT_PROJECT_INSTRUCTIONS.md)を一度だけ追加します。その後は、適用したい実践編のURLを、そのChatGPTプロジェクトのチャットに**URLだけで送信**してください。
+
+- **[一般編のURL](docs/CODEX_TIPS_JA.md)** — AGENTS.md、計画、レビュー、Skillsを対象リポジトリと照合
+- **[Codex CLI編のURL](docs/CODEX_CLI_TIPS_JA.md)** — CLI運用・設定・自動化の改善点を診断
+- **[VS Code × Codex × ChatGPT編のURL](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタ・ChatGPT・PRの使い分けを診断
+
+**[設定手順と動作例はこちら](docs/URL_ACTIVATION.md)**。ガイドと対象のGitHubリポジトリを読める接続・権限が必要です。URLだけでは**読み取り・診断・計画まで**、ファイルの編集やPR作成は後続の明示的な適用指示で実施します。非公開リポジトリを公開に変更する必要はありません。
+
 ## まず読む
 
 - **[Codex 実践Tips 8選](docs/CODEX_TIPS_JA.md)** — AGENTS.md、計画、完了条件、検証、レビュー、Skills、Worktree、引き継ぎ
