@@ -1,5 +1,7 @@
 # VS Code × Codex × ChatGPT 実践Tips 8選
 
+> **ChatGPTでこのガイドをプロジェクトに適用:** [初回設定（1回だけ）](URL_ACTIVATION.md)の後、このページのGitHub URLをChatGPTプロジェクトに**単独で送る**と、対象コードの現状診断・優先改善案・Codex用プロンプトを作成できます。URLだけではファイルを変更しません。プロジェクト指示・GitHubアクセス権が必要です。
+
 - 確認日: 2026-11-21
 - 対象: VS Code・Codex拡張機能・ChatGPTで個人/小規模アプリを開発する人
 - 主な利用例: Windows / Expo / React Native / TypeScript / GitHub
