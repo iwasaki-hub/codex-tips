@@ -9,6 +9,7 @@
 ## まず読む
 
 - **[Codex 実践Tips 8選](docs/CODEX_TIPS_JA.md)** — AGENTS.md、計画、完了条件、検証、レビュー、Skills、Worktree、引き継ぎ
+- **[Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md)** — CLIコマンド、設定プロファイル、compact、レビュー、exec、Worktree、利用状況、MCP
 - **[コピー用プロンプト集](templates/PROMPTS.md)** — 調査・計画、実装、レビュー、PR検証、引き継ぎ、Supabase変更前の確認
 - **[AGENTS.md雛形](templates/AGENTS.example.md)** — 既存の開発ルールに合わせて調整するための最小テンプレート
 - **[参考資料・出典](docs/SOURCES.md)** — 公式ガイドとRedditでの体験談を分類
@@ -25,6 +26,10 @@
 | 6 | 反復作業をSkills化する | 少数の明確なSkillを再利用 |
 | 7 | Worktreeで並列作業を分離 | 競合を避けて最後に統合検証 |
 | 8 | 長期作業はファイルに引き継ぐ | WORKLOG / HANDOFFなどを事実ベースで更新 |
+
+## CLI編も追加
+
+ターミナルで使う場合は [Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md) を参照してください。CLI内のスラッシュコマンドと、PowerShellなどのシェルで実行するコマンドを分けて説明しています。公式仕様と海外ユーザーの体験談も区別しています。
 
 ## 活用方法
 
