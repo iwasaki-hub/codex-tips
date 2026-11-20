@@ -1,5 +1,7 @@
 # Codex CLI 実践Tips 9選（2026年11月版）
 
+> **ChatGPTでこのガイドをプロジェクトに適用:** [初回設定（1回だけ）](URL_ACTIVATION.md)の後、このページのGitHub URLをChatGPTプロジェクトに**単独で送る**と、対象コードの現状診断・優先改善案・Codex用プロンプトを作成できます。URLだけではファイルを変更しません。プロジェクト指示・GitHubアクセス権が必要です。
+
 - 確認日: 2026-11-21
 - 対象: ターミナルでCodexを使う開発者（特にExpo / React Native / TypeScript / GitHub）
 - 優先順位: **OpenAI公式の仕様**を優先。**海外ユーザーの体験談**は再現性を保証しない
