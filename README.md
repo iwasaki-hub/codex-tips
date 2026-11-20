@@ -10,6 +10,8 @@
 
 - **[Codex 実践Tips 8選](docs/CODEX_TIPS_JA.md)** — AGENTS.md、計画、完了条件、検証、レビュー、Skills、Worktree、引き継ぎ
 - **[Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md)** — CLIコマンド、設定プロファイル、compact、レビュー、exec、Worktree、利用状況、MCP
+- **[VS Code × Codex × ChatGPT 実践Tips 8選](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタの文脈共有、設計→実装→レビュー、Windows/macOSの違い
+- **[VS Code × Codex × ChatGPT 専用プロンプト](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md)** — 設計、選択範囲の修正、実装、レビュー、PR判断、引き継ぎ
 - **[コピー用プロンプト集](templates/PROMPTS.md)** — 調査・計画、実装、レビュー、PR検証、引き継ぎ、Supabase変更前の確認
 - **[AGENTS.md雛形](templates/AGENTS.example.md)** — 既存の開発ルールに合わせて調整するための最小テンプレート
 - **[参考資料・出典](docs/SOURCES.md)** — 公式ガイドとRedditでの体験談を分類
@@ -30,6 +32,10 @@
 ## CLI編も追加
 
 ターミナルで使う場合は [Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md) を参照してください。CLI内のスラッシュコマンドと、PowerShellなどのシェルで実行するコマンドを分けて説明しています。公式仕様と海外ユーザーの体験談も区別しています。
+
+## VS Code × ChatGPT編も追加
+
+エディタを中心に開発する場合は、[VS Code × Codex × ChatGPT 実践Tips](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md) と [専用プロンプト集](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md) を活用してください。ChatGPTでの計画とCodexの編集・検証を分けて説明しています。
 
 ## 活用方法
 
