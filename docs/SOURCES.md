@@ -27,6 +27,18 @@
 | [How are you using multiple agents and worktrees?](https://www.reddit.com/r/codex/comments/1q3496o/how_are_you_using_multiple_agents_and_worktrees/) | Worktree・複数エージェント運用の議論。一般的な正解ではない |
 | [PROMPT.md + STATE.md](https://www.reddit.com/r/codex/comments/1vw6po6/a_simple_trick_that_made_long_ai_agent_tasks_way/) | セッションを越える進捗・意思決定の保存。個人の体験談 |
 
+## Codex CLI編の追加参考資料
+
+CLIコマンドの具体的な例・安全上の注意は [Codex CLI 実践Tips 9選](CODEX_CLI_TIPS_JA.md) にまとめています。
+
+| 資料 | 種別 / 採用した知見 |
+| --- | --- |
+| [Codex CLIコマンドリファレンス](https://developers.openai.com/codex/cli/reference) | 公式: exec、resume、fork、Worktree、スラッシュコマンドの構文と制約 |
+| [Codex Config basics](https://developers.openai.com/codex/config-basic) | 公式: プロファイル、ユーザー/プロジェクト設定、優先順位 |
+| [Codex as a platform](https://developers.openai.com/blog/codex-as-a-platform) | 公式: 非対話実行・自動化と構造化出力 |
+| [20 ways to waste fewer tokens in Codex](https://www.reddit.com/r/codex/comments/1xm88mo/20_ways_to_waste_fewer_tokens_in_codex_from_basic/) | コミュニティ: 指示の整理、MCP、プロファイル、テスト選択。保証された削減率ではない |
+| [Reduced Codex token/credit usage](https://www.reddit.com/r/codex/comments/1wi4hup/reduced_codex_tokencredit_usage/) | コミュニティ: コンテキスト管理と検証手順の工夫。単一比較からの報告 |
+
 ## メンテナンス方針
 
 1. 事実の根拠は公式ガイドを優先する。
