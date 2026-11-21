@@ -135,3 +135,9 @@
 - [コミュニティ4] [Reddit: PROMPT.md + STATE.md](https://www.reddit.com/r/codex/comments/1vw6po6/a_simple_trick_that_made_long_ai_agent_tasks_way/)
 
 関連リンクの分類・注意書きは [SOURCES.md](SOURCES.md) に記載。
+
+## UIデザイン設計編との連携
+
+この**一般編URL**をChatGPTプロジェクトに単独送信した後、対象リポジトリにUI・UXの課題がある場合は、[UIデザイン設計 実践Tips 10選](UI_DESIGN_TIPS_JA.md)を補助ガイドとして参照できます。例えば、画面のDone whenに文字拡大、Safe Area、タブのキーボード操作、色のコントラストを加える際に役立ちます。
+
+連携の条件・初回設定は[URL連携ガイド](URL_ACTIVATION.md)を参照してください。最新の[プロジェクト指示テンプレート](../templates/CHATGPT_PROJECT_INSTRUCTIONS.md)を対象ChatGPTプロジェクトへ反映する必要があります。**UI編は4番目の単独URLトリガーではなく、元のCodex診断の条件付き補助**です。UIに関係しない課題なら連携せず、提案は全体で最大3件、コードへの適用は別途明示指示がある場合のみ行います。
