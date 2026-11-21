@@ -196,3 +196,9 @@ codex mcp list
 - [Reddit: Reduced Codex token/credit usage][reddit-b] — セッション・ログ・検証負荷の個人体験。掲載値は単一比較
 
 他のTips: [Codex実践Tips 8選](CODEX_TIPS_JA.md) / [出典一覧](SOURCES.md)
+
+## UIデザイン設計編との連携
+
+この**CLI編URL**をChatGPTプロジェクトに単独送信して、対象のUI改修についてCodex CLIでの実装・テスト・検証を設計したい場合、[UIデザイン設計 実践Tips 10選](UI_DESIGN_TIPS_JA.md)を補助資料として参照できます。レスポンシブ、WCAG、フォーカス、実機検証などをDone whenへ組み込むときに使います。
+
+**CLI設定・プロファイルだけの相談にはUI編を連携しません。** 条件は[URL連携ガイド](URL_ACTIVATION.md)と[最新のプロジェクト指示テンプレート](../templates/CHATGPT_PROJECT_INSTRUCTIONS.md)を参照してください。元のCLI編を優先し、UI編との統合提案は全体で最大3件。URLだけではコード・設定の変更やPR作成は実行しません。

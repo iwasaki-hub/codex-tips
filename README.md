@@ -21,6 +21,7 @@ ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連
 - **[Codex 実践Tips 8選](docs/CODEX_TIPS_JA.md)** — AGENTS.md、計画、完了条件、検証、レビュー、Skills、Worktree、引き継ぎ
 - **[Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md)** — CLIコマンド、設定プロファイル、compact、レビュー、exec、Worktree、利用状況、MCP
 - **[VS Code × Codex × ChatGPT 実践Tips 8選](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタの文脈共有、設計→実装→レビュー、Windows/macOSの違い
+- **[UIデザイン設計 実践Tips 10選](docs/UI_DESIGN_TIPS_JA.md)** — 海外の公式ガイド・研究・実装例を、設計原則、iPhone、アクセシビリティ、トークン、React UI、検証に分類
 - **[VS Code × Codex × ChatGPT 専用プロンプト](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md)** — 設計、選択範囲の修正、実装、レビュー、PR判断、引き継ぎ
 - **[コピー用プロンプト集](templates/PROMPTS.md)** — 調査・計画、実装、レビュー、PR検証、引き継ぎ、Supabase変更前の確認
 - **[AGENTS.md雛形](templates/AGENTS.example.md)** — 既存の開発ルールに合わせて調整するための最小テンプレート
@@ -46,6 +47,20 @@ ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連
 ## VS Code × ChatGPT編も追加
 
 エディタを中心に開発する場合は、[VS Code × Codex × ChatGPT 実践Tips](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md) と [専用プロンプト集](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md) を活用してください。ChatGPTでの計画とCodexの編集・検証を分けて説明しています。
+
+## UIデザイン設計編も追加
+
+海外発の参考資料を探すときは [UIデザイン設計 実践Tips 10選](docs/UI_DESIGN_TIPS_JA.md) を参照してください。Apple HIG、Material Design、Nielsen Norman Group、W3C、Mobbin、Radix、shadcn/uiなどを、設計・実装・レビューの場面ごとにまとめています。**参考例とアクセシビリティ基準を混同しない**こと、確認済みの操作と未確認の実機テストを区別することを重視しています。
+
+UIデザイン編は、既存の3つの「URLだけで適用する」ガイドを選んだ後、**UIに関連する課題がある場合に参照する補助ガイド**です。UI編のURL自体を4番目の起動条件に追加する方式ではありません。
+
+## Codex実践編 → UIデザイン編への連携
+
+[ChatGPTプロジェクト指示テンプレート](templates/CHATGPT_PROJECT_INSTRUCTIONS.md)を設定すると、既存の**一般編／CLI編／VS Code編**のURLを選択した後、対象リポジトリのUI・UX課題が確認できた場合のみ、[UIデザイン設計Tips](docs/UI_DESIGN_TIPS_JA.md)を併せて参照できます。
+
+**Codex実践編を選択 → 現状診断 → UI課題があればUI設計Tipsを追加照合 → 統合改善案（最大3件）→ 明示的な依頼で実装**、という流れです。UI課題がない場合は連携せず、CLI・CI・認証など元の課題に集中します。実装やPR作成はURLだけでは実行しません。
+
+運用例と条件は [URL連携ガイドの「UI連携」](docs/URL_ACTIVATION.md#codex実践編を選んだ後にuiデザイン設計tipsへ連携) にまとめました。**以前のプロジェクト指示を設定済みのChatGPTプロジェクトには、更新したテンプレートを再反映してください。** GitHubリポジトリを更新するだけで、設定済みの指示が自動更新されるわけではありません。
 
 ## 活用方法
 
