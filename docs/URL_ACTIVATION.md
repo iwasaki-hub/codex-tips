@@ -6,7 +6,7 @@
 
 この仕組みは、**各ChatGPTプロジェクトに指示を一度だけ設定する**ことで、その後は**実践ガイドのURLだけ**を送信して、対象リポジトリの現状診断・改善提案・Codex用プロンプトの作成を開始できるようにする運用テンプレートです。
 
-GitHub上のMarkdownを更新するだけでChatGPTの動作を全チャットで自動変更できるわけではありません。**ChatGPTプロジェクトの設定が必要**で、毎回の挙動はそのプロジェクトの文脈・利用できる接続・権限に左右されます。
+**`iwasaki-hub/codex-tips` はPublicリポジトリ**です。3つの実践ガイドはGitHubログインなしで閲覧できます。ただし、URLだけを送って自動的に適用診断を始めるには、**ChatGPTプロジェクトの指示を最初に設定する必要があります**。ChatGPTのURL取得機能や対象リポジトリへのアクセス権によって実行できる範囲は異なります。公開ガイドを読めることと、非公開の開発リポジトリを読めることは別です。
 
 - **URLだけ → 読み取り・診断・適用計画（書き込みなし）**
 - **その後「適用して」 → 明示的な実装依頼（権限・安全条件の範囲内でfeatureブランチとPR）**
@@ -17,7 +17,7 @@ GitHub上のMarkdownを更新するだけでChatGPTの動作を全チャット�
 1. ChatGPTで対象アプリの**プロジェクト**（例: LittleDiary、KondateBiyori）を開く。なければ作成する。
 2. プロジェクト名のメニュー（…）から **プロジェクト設定 → プロジェクトの指示** を開く。
 3. [CHATGPT_PROJECT_INSTRUCTIONS.md](../templates/CHATGPT_PROJECT_INSTRUCTIONS.md) の全文をコピーし、既存の指示と矛盾しないよう追記する。すでにプロジェクト固有のルールがある場合は消さずに統合する。
-4. **GitHubをChatGPTに接続**し、ガイドを保存した非公開リポジトリ `iwasaki-hub/codex-tips` と、対象アプリのリポジトリへの読み取り権限があることを確認する。GitHubアプリが対応・有効化されている必要がある。接続だけで私有リポジトリが必ず読めるとは限らない。
+4. **公開ガイドの閲覧にGitHub接続は不要**。ChatGPTがWebページを取得できるならそのまま参照できます。適用先アプリのリポジトリが**Private**の場合は、ChatGPTのGitHub接続などに対象リポジトリの読み取り権限があることを確認してください。ChatGPTがURLを取得できない場合は、ガイド本文を貼り付ける方法も利用できます。
 5. 同じChatGPTプロジェクト内で、下にある**ガイドのURLだけ**をメッセージとして送信する。
 
 参考: [OpenAI公式: ChatGPTのプロジェクト](https://help.openai.com/ja-jp/articles/10169521-projects-in-chatgpt) / [GitHubをChatGPTに接続](https://help.openai.com/ja-jp/articles/11145903-connecting-github-to-chatgpt)
@@ -30,7 +30,7 @@ GitHub上のMarkdownを更新するだけでChatGPTの動作を全チャット�
 | **Codex CLI編** — コマンド、設定、作業効率、MCP、Worktree | https://github.com/iwasaki-hub/codex-tips/blob/main/docs/CODEX_CLI_TIPS_JA.md |
 | **VS Code × Codex × ChatGPT編** — エディタ、役割分担、UI修正、PR | https://github.com/iwasaki-hub/codex-tips/blob/main/docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md |
 
-URLはGitHubの`main`にある既存ドキュメントへのリンクです。リポジトリが非公開のため、読み取れるのはアクセス権のあるユーザーと有効なGitHub接続だけです。GitHubのプライバシー設定を変更する必要はありません。
+URLは**公開リポジトリ** `iwasaki-hub/codex-tips` の `main` にあるドキュメントです。**ガイドを読むだけならGitHubアカウントやGitHub接続は不要**です。対象の開発リポジトリがPrivateの場合、その中身を診断するには別途アクセス権が必要で、PrivateからPublicに変更する必要はありません。
 
 ## URLだけを送ったときの動作
 
@@ -90,15 +90,15 @@ https://github.com/iwasaki-hub/codex-tips/blob/main/docs/VSCODE_CODEX_CHATGPT_TI
 - シークレット、`.env.local`、個人トークンを収集・転記しない。
 - URLだけでは認証設定・本番DB・公開環境・課金・PRマージは実行しない。
 - 検証未実施なら未実施と書き、CI成功と実機確認を混同しない。
-- GitHub接続が見えない場合、ブラウザで非公開ソースを無理に閲覧しない。
+- 公開ガイドはWebで参照できても、Privateの対象リポジトリは許可された接続がなければ読まない。閲覧できないコードは推測で診断しない。
 
 ## トラブルシューティング
 
 **Q. URLを送っても普通の要約だけが返る**  
 A. URLだけの起動はChatGPTの標準的な自動コマンド機能ではありません。対象ChatGPTプロジェクトの**プロジェクト指示**に[テンプレート](../templates/CHATGPT_PROJECT_INSTRUCTIONS.md)が入っているか確認してください。
 
-**Q. 非公開リポジトリにアクセスできない**  
-A. ChatGPTのGitHub接続、対象リポジトリを含むGitHubアプリの権限を確認してください。権限がない場合はユーザー自身がガイド内容を貼り付ける方法も使えます。
+**Q. 公開ガイドを開けない・対象の開発リポジトリを読めない**  
+A. ガイド自体はPublicなので通常のブラウザからログインなしで閲覧できます。ChatGPTがURLを取得できない場合はガイド本文を貼り付けてください。適用先リポジトリがPrivateの場合、ChatGPTのGitHub接続や読み取り権限を別途確認する必要があります。
 
 **Q. どのアプリに適用されるのか**  
 A. 原則として、そのChatGPTプロジェクトで対象としている開発リポジトリです。複数ある場合はChatGPTが確認します。
