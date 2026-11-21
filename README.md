@@ -14,7 +14,7 @@ ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連
 - **[Codex CLI編のURL](docs/CODEX_CLI_TIPS_JA.md)** — CLI運用・設定・自動化の改善点を診断
 - **[VS Code × Codex × ChatGPT編のURL](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタ・ChatGPT・PRの使い分けを診断
 
-**[設定手順と動作例はこちら](docs/URL_ACTIVATION.md)**。ガイドと対象のGitHubリポジトリを読める接続・権限が必要です。URLだけでは**読み取り・診断・計画まで**、ファイルの編集やPR作成は後続の明示的な適用指示で実施します。非公開リポジトリを公開に変更する必要はありません。
+**[設定手順と動作例はこちら](docs/URL_ACTIVATION.md)**。**`codex-tips` はPublic**なので実践ガイドはGitHubログインなしで閲覧できます（ChatGPTがURLを取得できる環境が必要です）。適用先の開発リポジトリが**Privateの場合のみ**、その内容をChatGPTが読むにはGitHub接続など適切なアクセス権が必要です。適用先を公開する必要はありません。URLだけでは**読み取り・診断・計画まで**、ファイル編集やPR作成は後続の明示的な適用指示で実施します。
 
 ## まず読む
 
