@@ -149,3 +149,9 @@ Expo / TypeScriptアプリなら、まず対象のpackage.jsonのscriptsを確�
 - [Reddit: How to make codex work fantastically](https://www.reddit.com/r/codex/comments/1u97eq0/how_to_make_codex_work_fantastically/) — AGENTS.mdの扱い（個人の意見）
 
 他のガイド: [一般Tips](CODEX_TIPS_JA.md) / [CLI編](CODEX_CLI_TIPS_JA.md) / [出典一覧](SOURCES.md)
+
+## UIデザイン設計編との連携
+
+この**VS Code × Codex × ChatGPT編URL**をChatGPTプロジェクトに単独送信して、対象のUI・UX改善点が確認できた場合、[UIデザイン設計 実践Tips 10選](UI_DESIGN_TIPS_JA.md)を補助資料として使えます。参考UIの比較、トークン設計、コンポーネント状態、WCAG、iPhone実機検証などを設計レビュー・実装のDone whenに結びつけます。
+
+[URL連携ガイド](URL_ACTIVATION.md)と[プロジェクト指示テンプレート](../templates/CHATGPT_PROJECT_INSTRUCTIONS.md)を更新・設定したChatGPTプロジェクト内で動作する、**条件付き・読み取り専用の連携**です。VS Code編を選んだだけでUIに問題があると決めつけず、元ガイドとUI編を統合して最大3件を提案。コード変更・PR作成は「適用して」など別途明示指示がある場合のみ実施します。
