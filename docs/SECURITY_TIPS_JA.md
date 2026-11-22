@@ -68,11 +68,11 @@ APIキー、`service_role`キー、アクセストークン、秘密鍵、接続
 
 ## Tip 6. Expo・Next.jsのクライアント公開変数に秘密鍵を入れない
 
-`EXPO_PUBLIC_*` や `NEXT_PUBLIC_*` の値は、クライアント側コードに含まれ得る。名前が「環境変数」でも秘密にはならない。Expoの`EXPO_PUBLIC_*`は公開してよい値に限定する。
+`EXPO_PUBLIC_*` や `NEXT_PUBLIC_*` の値は、クライアント側コードに含まれ得る。名前が「環境変数」でも秘密にはならない。Expoの`EXPO_PUBLIC_*`は公開してよい値に限定する。Next.jsの`next.config.js`内の`env`設定もクライアントへ含まれ得る。
 
 - **実践:** サーバー専用の秘密鍵はサーバー側でのみ利用する。ビルドや配信物、ブラウザー開発者ツールから見えるものを秘密として扱わない。
 - **確認:** 公開キーと秘密キーの用途を分類し、クライアントの環境変数・アプリ設定・バンドルに秘密がないことを確認する。
-- **出典:** [Expo: Environment variables](https://docs.expo.dev/guides/environment-variables/) / [Supabase: API keys](https://supabase.com/docs/guides/getting-started/api-keys)
+- **出典:** [Expo: Environment variables](https://docs.expo.dev/guides/environment-variables/) / [Next.js: Environment variables](https://nextjs.org/docs/app/guides/environment-variables) / [Supabase: API keys](https://supabase.com/docs/guides/getting-started/api-keys)
 
 ## Tip 7. SupabaseはRLSとGRANTを両方確認し、他人のデータで試す
 
