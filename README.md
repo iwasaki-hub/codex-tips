@@ -23,6 +23,7 @@ ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連
 - **[VS Code × Codex × ChatGPT 実践Tips 8選](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタの文脈共有、設計→実装→レビュー、Windows/macOSの違い
 - **[UIデザイン設計 実践Tips 10選](docs/UI_DESIGN_TIPS_JA.md)** — 海外の公式ガイド・研究・実装例を、設計原則、iPhone、アクセシビリティ、トークン、React UI、検証に分類
 - **[セキュリティ実践Tips 10選](docs/SECURITY_TIPS_JA.md)** — Codexの権限、プロンプトインジェクション、秘密情報、GitHub Actions、Expo・Supabaseの安全対策
+- **[海外のWeb・モバイル脆弱性対策Tips 12選](docs/APP_VULNERABILITY_TIPS_JA.md)** — OWASP Top 10:2025、API認可、XSS/CSRF/SSRF、2026年のNext.js脆弱性、iPhone/Android対策、確認テスト
 - **[セキュリティ診断用プロンプト](templates/SECURITY_REVIEW_PROMPTS.md)** — 読み取り専用診断、認可・RLS、PR/CIレビュー、安全な修正依頼
 - **[VS Code × Codex × ChatGPT 専用プロンプト](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md)** — 設計、選択範囲の修正、実装、レビュー、PR判断、引き継ぎ
 - **[コピー用プロンプト集](templates/PROMPTS.md)** — 調査・計画、実装、レビュー、PR検証、引き継ぎ、Supabase変更前の確認
@@ -66,7 +67,7 @@ UIデザイン編は、既存の3つの「URLだけで適用する」ガイド�
 
 ## セキュリティ実践Tipsも追加
 
-[セキュリティ実践Tips 10選](docs/SECURITY_TIPS_JA.md)では、**AIエージェントの権限と信頼境界**、**秘密情報の漏えい防止**、**GitHub Actions / 依存関係**、**Expo / Next.js / Supabaseの認証・認可**を確認できます。最初は読み取り専用の診断から始める[専用プロンプト集](templates/SECURITY_REVIEW_PROMPTS.md)も用意しました。
+[セキュリティ実践Tips 10選](docs/SECURITY_TIPS_JA.md)では、**AIエージェントの権限と信頼境界**、**秘密情報の漏えい防止**、**GitHub Actions / 依存関係**、**Expo / Next.js / Supabaseの認証・認可**を確認できます。アプリ本体の脆弱性は[海外のWeb・モバイルアプリ対策Tips 12選](docs/APP_VULNERABILITY_TIPS_JA.md)に分け、OWASP Top 10:2025、2026年のNext.js/モバイルの公式情報と検証条件も掲載しました。最初は読み取り専用の診断から始める[専用プロンプト集](templates/SECURITY_REVIEW_PROMPTS.md)も用意しました。
 
 既存の一般編・CLI編・VS Code編のURLを使った診断中に、**根拠のあるセキュリティ課題が見つかった場合のみ**追加参照します。セキュリティ編のURL自体は新たな単独起動条件にはせず、既存の3つの入口を維持します。UI編と両方該当しても優先改善は**合計3件以内**です。**更新済みのプロジェクト指示は各ChatGPTプロジェクトに再反映が必要**です。
 
