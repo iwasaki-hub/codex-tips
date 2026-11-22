@@ -69,6 +69,8 @@ CLIコマンドの具体的な例・安全上の注意は [Codex CLI 実践Tips 
 | [GitHub: Securely using pull_request_target](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target) | 公式: 特権ワークフローと未信頼PRコード実行の危険 |
 | [GitHub: Dependabot security updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates) | 公式: 脆弱な依存関係への対応PR |
 | [Expo: Environment variables](https://docs.expo.dev/guides/environment-variables/) | 公式: EXPO_PUBLIC_変数は秘密情報に使わない |
+| [Next.js: Environment variables](https://nextjs.org/docs/app/guides/environment-variables) | 公式: NEXT_PUBLIC_変数のクライアントへの埋め込み |
+| [Next.js: next.config.js env](https://nextjs.org/docs/app/api-reference/config/next-config-js/env) | 公式: 設定されたenv値の配信物への埋め込み |
 | [Supabase: API keys](https://supabase.com/docs/guides/getting-started/api-keys) | 公式: 公開可能なキーとRLSをバイパスする秘密キーの区別 |
 | [Supabase: RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) | 公式: 公開スキーマのRLS、ポリシー |
 | [Supabase: Securing your API](https://supabase.com/docs/guides/api/securing-your-api) | 公式: Data APIの公開設定、GRANTとRLSの違い |
