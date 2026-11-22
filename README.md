@@ -3,7 +3,7 @@
 海外のCodexユーザーが共有している実践Tipsと、OpenAI公式ガイドの知見を日本語で整理したメモ集です。
 
 **対象:** CodexでTypeScript / React / Expo / Supabaseなどのアプリを開発する人  
-**最終確認:** 2026-11-21  
+**最終確認:** 2026-11-22  
 **方針:** 公式情報とコミュニティの体験談を分け、再利用できる雛形を残す
 
 ## URLだけで各プロジェクトに適用する（初回設定のみ必要）
@@ -22,6 +22,8 @@ ChatGPTの**プロジェクト設定 → プロジェクトの指示**に[URL連
 - **[Codex CLI 実践Tips 9選](docs/CODEX_CLI_TIPS_JA.md)** — CLIコマンド、設定プロファイル、compact、レビュー、exec、Worktree、利用状況、MCP
 - **[VS Code × Codex × ChatGPT 実践Tips 8選](docs/VSCODE_CODEX_CHATGPT_TIPS_JA.md)** — エディタの文脈共有、設計→実装→レビュー、Windows/macOSの違い
 - **[UIデザイン設計 実践Tips 10選](docs/UI_DESIGN_TIPS_JA.md)** — 海外の公式ガイド・研究・実装例を、設計原則、iPhone、アクセシビリティ、トークン、React UI、検証に分類
+- **[セキュリティ実践Tips 10選](docs/SECURITY_TIPS_JA.md)** — Codexの権限、プロンプトインジェクション、秘密情報、GitHub Actions、Expo・Supabaseの安全対策
+- **[セキュリティ診断用プロンプト](templates/SECURITY_REVIEW_PROMPTS.md)** — 読み取り専用診断、認可・RLS、PR/CIレビュー、安全な修正依頼
 - **[VS Code × Codex × ChatGPT 専用プロンプト](templates/VSCODE_CODEX_CHATGPT_PROMPTS.md)** — 設計、選択範囲の修正、実装、レビュー、PR判断、引き継ぎ
 - **[コピー用プロンプト集](templates/PROMPTS.md)** — 調査・計画、実装、レビュー、PR検証、引き継ぎ、Supabase変更前の確認
 - **[AGENTS.md雛形](templates/AGENTS.example.md)** — 既存の開発ルールに合わせて調整するための最小テンプレート
@@ -61,6 +63,12 @@ UIデザイン編は、既存の3つの「URLだけで適用する」ガイド�
 **Codex実践編を選択 → 現状診断 → UI課題があればUI設計Tipsを追加照合 → 統合改善案（最大3件）→ 明示的な依頼で実装**、という流れです。UI課題がない場合は連携せず、CLI・CI・認証など元の課題に集中します。実装やPR作成はURLだけでは実行しません。
 
 運用例と条件は [URL連携ガイドの「UI連携」](docs/URL_ACTIVATION.md#codex実践編を選んだ後にuiデザイン設計tipsへ連携) にまとめました。**以前のプロジェクト指示を設定済みのChatGPTプロジェクトには、更新したテンプレートを再反映してください。** GitHubリポジトリを更新するだけで、設定済みの指示が自動更新されるわけではありません。
+
+## セキュリティ実践Tipsも追加
+
+[セキュリティ実践Tips 10選](docs/SECURITY_TIPS_JA.md)では、**AIエージェントの権限と信頼境界**、**秘密情報の漏えい防止**、**GitHub Actions / 依存関係**、**Expo / Next.js / Supabaseの認証・認可**を確認できます。最初は読み取り専用の診断から始める[専用プロンプト集](templates/SECURITY_REVIEW_PROMPTS.md)も用意しました。
+
+既存の一般編・CLI編・VS Code編のURLを使った診断中に、**根拠のあるセキュリティ課題が見つかった場合のみ**追加参照します。セキュリティ編のURL自体は新たな単独起動条件にはせず、既存の3つの入口を維持します。UI編と両方該当しても優先改善は**合計3件以内**です。**更新済みのプロジェクト指示は各ChatGPTプロジェクトに再反映が必要**です。
 
 ## 活用方法
 
