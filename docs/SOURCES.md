@@ -1,6 +1,6 @@
 # 参考資料・出典管理
 
-確認日: 2026-11-21
+確認日: 2026-11-22
 
 **分類**
 - 公式: OpenAIが公開したガイド・開発事例。機能仕様や推奨の裏づけとして優先する。
@@ -54,7 +54,53 @@ CLIコマンドの具体的な例・安全上の注意は [Codex CLI 実践Tips 
 | [My best workflow so far for building projects](https://www.reddit.com/r/codex/comments/1tf4s07/my_best_workflow_so_far_for_building_projects/) | コミュニティ: タスク分割と役割分担の体験談 |
 | [Is there a better way to use ChatGPT + Codex?](https://www.reddit.com/r/codex/comments/1vtmmjt/is_there_a_better_way_to_use_chatgpt_codex/) | コミュニティ: チャットとコーディングエージェントの連携議論 |
 
-## メンテナンス方針
+## セキュリティ編の追加参考資料（2026-11-22確認）
+
+[セキュリティ実践Tips 10選](SECURITY_TIPS_JA.md) は、AIを使う開発でも**機械的な権限制御と実際のテストが必要**という前提で整理しています。
+
+| 資料 | 種別 / 採用した知見 |
+| --- | --- |
+| [Codex: Agent approvals & security](https://developers.openai.com/codex/agent-approvals-security) | 公式: Sandbox、コマンド承認、危険な全権限モード |
+| [Codex Security](https://developers.openai.com/codex/security) | 公式: 脆弱性診断・修正支援、利用に必要なアクセス条件 |
+| [MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp) | 公式: 未信頼コンテンツによる指示注入、ツール実行の承認と接続先 |
+| [Shell + Skills + Compaction](https://developers.openai.com/blog/skills-shell-tips) | 公式: Skillsとネットワークの組み合わせによる情報流出リスク |
+| [GitHub: Security features](https://docs.github.com/en/code-security/getting-started/github-security-features) | 公式: Secret scanning、Push protection、利用プラン・公開設定による差 |
+| [GitHub: Secure use reference](https://docs.github.com/en/actions/reference/security/secure-use) | 公式: GITHUB_TOKENの最小権限、ActionのSHA固定 |
+| [GitHub: Securely using pull_request_target](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target) | 公式: 特権ワークフローと未信頼PRコード実行の危険 |
+| [GitHub: Dependabot security updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates) | 公式: 脆弱な依存関係への対応PR |
+| [Expo: Environment variables](https://docs.expo.dev/guides/environment-variables/) | 公式: EXPO_PUBLIC_変数は秘密情報に使わない |
+| [Next.js: Environment variables](https://nextjs.org/docs/app/guides/environment-variables) | 公式: NEXT_PUBLIC_変数のクライアントへの埋め込み |
+| [Next.js: next.config.js env](https://nextjs.org/docs/app/api-reference/config/next-config-js/env) | 公式: 設定されたenv値の配信物への埋め込み |
+| [Supabase: API keys](https://supabase.com/docs/guides/getting-started/api-keys) | 公式: 公開可能なキーとRLSをバイパスする秘密キーの区別 |
+| [Supabase: RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) | 公式: 公開スキーマのRLS、ポリシー |
+| [Supabase: Securing your API](https://supabase.com/docs/guides/api/securing-your-api) | 公式: Data APIの公開設定、GRANTとRLSの違い |
+| [OpenAI: Custom Code Review rules for Codex](https://developers.openai.com/blog/custom-code-review-rules-for-codex) | 公式: AIレビューはCIや保護ルールの代替ではない |
+
+## 海外のWeb・モバイルアプリ脆弱性対策編の出典（2026-11-22確認）
+
+[海外の脆弱性対策Tips 12選](APP_VULNERABILITY_TIPS_JA.md) は、フレームワークの実際の使用状況に関係なく「全て脆弱」と断定せず、公式Advisoryの影響範囲と修正版を調査する運用を推奨します。
+
+| 資料 | 公表時期 / 採用した知見 |
+| --- | --- |
+| [OWASP Top 10:2025](https://top10.owasp.org/2025/) | 2025年版: アクセス制御、設定ミス、サプライチェーン等のWebリスク |
+| [OWASP ASVS 5.0](https://asvs.owasp.org/) | 安定版5.0.0: Webアプリのセキュリティ要求・検証項目 |
+| [OWASP API Top 10:2023](https://api-security.owasp.org/editions/2023/en/0x11-t10/) | API専用の認可、Mass Assignment、リソース消費リスク（Web Top 10:2025とは別） |
+| [OWASP MASVS](https://mas.owasp.org/MASVS/) | iOS/Androidの保存・認証・ネットワーク・プラットフォームの安全性 |
+| [OWASP MASTG v2.0](https://mas.owasp.org/news/2026/07/04/mastg-v200-release/) | 2026年7月: 具体的テストと弱点・対策の紐付け |
+| [OWASP MASWE v1.0](https://mas.owasp.org/news/2026/08/17/maswe-v100-release/) | 2026年8月: モバイル固有の弱点分類 |
+| [Next.js CVE-2026-94483](https://github.com/advisories/GHSA-cjq9-62q9-8jv4) | 2026年9月30日公表: Image OptimizationのSSRF |
+| [Next.js CVE-2026-94482](https://github.com/advisories/GHSA-p3m5-59mp-jv5r) | 2026年10月14日公表: App Router + Server ActionsのDoS |
+| [Next.js CVE-2026-94544](https://github.com/advisories/GHSA-3w37-wq28-93x7) | 2026年9月30日公表: キャッシュとDraft Modeの情報漏えい |
+| [React CVE-2025-55182](https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components) | 2025年12月: React Server ComponentsのRCE（React2Shell） |
+| [Next.js Authentication](https://nextjs.org/docs/app/guides/authentication) | Server Actionsにもサーバー側認可が必要 |
+| [OWASP SSRF Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) | 宛先制限、リダイレクト・DNS・ネットワーク境界 |
+| [OWASP File Upload](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) | サイズ・形式・保存先の検証 |
+| [OWASP Passkey Security](https://cheatsheetseries.owasp.org/cheatsheets/Passkey_Security_Cheat_Sheet.html) | フィッシング耐性と復旧手段の安全性 |
+| [Expo SecureStore](https://docs.expo.dev/versions/latest/sdk/securestore/) | モバイル端末上の機微情報保存の制約 |
+| [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | 実際に悪用されたCVEの優先修正 |
+| [GitHub Dependabot](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates) | 脆弱な依存関係の検知・修正PR |
+
+
 
 1. 事実の根拠は公式ガイドを優先する。
 2. 新モデルや機能の登場時は、以前の「必須手順」が過剰になっていないか見直す。
