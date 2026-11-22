@@ -1,6 +1,6 @@
 # 参考資料・出典管理
 
-確認日: 2026-11-21
+確認日: 2026-11-22
 
 **分類**
 - 公式: OpenAIが公開したガイド・開発事例。機能仕様や推奨の裏づけとして優先する。
@@ -53,6 +53,26 @@ CLIコマンドの具体的な例・安全上の注意は [Codex CLI 実践Tips 
 | [Work with Apps on macOS](https://help.openai.com/ja-jp/articles/10119604-work-with-apps-on-macos) | 公式: 対応プラットフォームとアプリ |
 | [My best workflow so far for building projects](https://www.reddit.com/r/codex/comments/1tf4s07/my_best_workflow_so_far_for_building_projects/) | コミュニティ: タスク分割と役割分担の体験談 |
 | [Is there a better way to use ChatGPT + Codex?](https://www.reddit.com/r/codex/comments/1vtmmjt/is_there_a_better_way_to_use_chatgpt_codex/) | コミュニティ: チャットとコーディングエージェントの連携議論 |
+
+## セキュリティ編の追加参考資料（2026-11-22確認）
+
+[セキュリティ実践Tips 10選](SECURITY_TIPS_JA.md) は、AIを使う開発でも**機械的な権限制御と実際のテストが必要**という前提で整理しています。
+
+| 資料 | 種別 / 採用した知見 |
+| --- | --- |
+| [Codex: Agent approvals & security](https://developers.openai.com/codex/agent-approvals-security) | 公式: Sandbox、コマンド承認、危険な全権限モード |
+| [Codex Security](https://developers.openai.com/codex/security) | 公式: 脆弱性診断・修正支援、利用に必要なアクセス条件 |
+| [MCP and Connectors](https://developers.openai.com/api/docs/guides/tools-connectors-mcp) | 公式: 未信頼コンテンツによる指示注入、ツール実行の承認と接続先 |
+| [Shell + Skills + Compaction](https://developers.openai.com/blog/skills-shell-tips) | 公式: Skillsとネットワークの組み合わせによる情報流出リスク |
+| [GitHub: Security features](https://docs.github.com/en/code-security/getting-started/github-security-features) | 公式: Secret scanning、Push protection、利用プラン・公開設定による差 |
+| [GitHub: Secure use reference](https://docs.github.com/en/actions/reference/security/secure-use) | 公式: GITHUB_TOKENの最小権限、ActionのSHA固定 |
+| [GitHub: Securely using pull_request_target](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target) | 公式: 特権ワークフローと未信頼PRコード実行の危険 |
+| [GitHub: Dependabot security updates](https://docs.github.com/en/code-security/concepts/supply-chain-security/dependabot-security-updates) | 公式: 脆弱な依存関係への対応PR |
+| [Expo: Environment variables](https://docs.expo.dev/guides/environment-variables/) | 公式: EXPO_PUBLIC_変数は秘密情報に使わない |
+| [Supabase: API keys](https://supabase.com/docs/guides/getting-started/api-keys) | 公式: 公開可能なキーとRLSをバイパスする秘密キーの区別 |
+| [Supabase: RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) | 公式: 公開スキーマのRLS、ポリシー |
+| [Supabase: Securing your API](https://supabase.com/docs/guides/api/securing-your-api) | 公式: Data APIの公開設定、GRANTとRLSの違い |
+| [OpenAI: Custom Code Review rules for Codex](https://developers.openai.com/blog/custom-code-review-rules-for-codex) | 公式: AIレビューはCIや保護ルールの代替ではない |
 
 ## メンテナンス方針
 
